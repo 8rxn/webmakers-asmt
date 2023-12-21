@@ -23,7 +23,7 @@ const Workings = () => {
   return (
     <section
       id="how-it-works"
-      className=" flex flex-col gap-12 max-w-7xl mx-4 border-gray-200 rounded-3xl border py-12 shadow-[0px_11px_37px_1px_rgba(28,25,23,0.05)] mb-24 sm:mb-36"
+      className=" flex flex-col gap-12 max-w-7xl mx-auto border-gray-200 rounded-3xl border py-12 shadow-[0px_11px_37px_1px_rgba(28,25,23,0.05)] mb-24 sm:mb-36"
     >
       <ul className="flex flex-col gap-2">
         <Heading size={"sm"}>How it works</Heading>

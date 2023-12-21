@@ -34,5 +34,6 @@
 }
 
 html {
-  font-family: 'Satoshi-medium', 'Courier New', Courier, monospace;
+  font-family: 'Satoshi-medium', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth !important;
 }

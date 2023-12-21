@@ -5,9 +5,9 @@ import Typography from "./ui/typography";
 const Pricing = () => {
   return (
     <section
-      className="flex flex-col gap-12 py-20 bg-top bg-no-repeat bg-contain  "
+      className="flex flex-col gap-12 py-20 "
       id="pricing"
-      style={{ background: "url('bg-pricing.png')" }}
+      style={{background:'url(/bg-pricing.webp) top no-repeat',backgroundSize:"cover"}}
     >
       <ul className="flex flex-col gap-3">
         <Heading size={"default"}>

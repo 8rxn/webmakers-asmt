@@ -5,7 +5,7 @@ import Clients from "./clients";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-28 p-11 pt-36 mt-18  " style={{background:'url(/bg-hero.png) top no-repeat'}}>
+    <section className="flex flex-col gap-28 p-11 pt-36 mt-18  " style={{background:'url(/bg-hero.webp) top no-repeat',backgroundSize:"cover"}}>
       <div className="flex flex-col gap-6 items-center mx-4 sm:mx-6 md:mx-8 lg:mx-16 ">
         <Heading size={"lg"}>
           Elevate Your Presence with Seamless Design and Innovation.

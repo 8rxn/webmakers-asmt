@@ -26,7 +26,9 @@ const Navbar = () => {
         </div>
 
         <div className="flex gap-2">
+        <a href="mailto:me@rajaryan.work?subject=You%20are%20Hired!" target="_blank" rel="noreferrer">
           <Button variant={"outline"}>Contact us</Button>
+          </a>
           <Button
             onClick={toggle}
             className="sm:hidden p-2"
@@ -45,9 +47,9 @@ const Navbar = () => {
               <path
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
                 d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
               />
 
@@ -65,9 +67,9 @@ const Navbar = () => {
               <path
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
                 d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"
               />
             </svg>
