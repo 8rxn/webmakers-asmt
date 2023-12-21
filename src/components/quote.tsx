@@ -8,14 +8,20 @@ const Quote = () => {
         alt="company quote"
         className="h-10"
         height={40}
-        width={"auto"}
+        width={140}
       />
       <Typography size={"lg"}>
         We&apos;ve been with unicraft to kick start every new project and
         can&apos;t imagine working without it.
       </Typography>
       <div className="flex flex-col gap-4  ">
-        <img src="/avatar.webp" alt="avatar" className="h-16 w-16 mx-auto" height={64} width={64} />
+        <img
+          src="/avatar.webp"
+          alt="avatar"
+          className="h-16 w-16 mx-auto"
+          height={64}
+          width={64}
+        />
         <div>
           <Typography size={"nav"}>Candice Wu</Typography>
           <Typography size={"sm"}>Product Manager, Sisyphus</Typography>

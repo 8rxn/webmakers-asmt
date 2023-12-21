@@ -47,16 +47,15 @@ const Faq = () => {
   return (
     <section className="flex flex-col gap-12 mx-4 my-20 " id="faq">
       <div className="flex flex-col gap-3">
-        
-          <Heading size={"default"}>Frequently asked questions</Heading>
-          <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
-            Everything you need to know about the product and billing.
-          </Typography>
+        <Heading size={"default"}>Frequently asked questions</Heading>
+        <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
+          Everything you need to know about the product and billing.
+        </Typography>
       </div>
 
       <ul className="flex flex-col gap-8  max-w-3xl mx-auto">
         {questions.map((q, index) => (
-          <li>
+          <li key={q.question}>
             <div
               className={`${
                 index != 0 ? "border-t border-gray-200" : ""

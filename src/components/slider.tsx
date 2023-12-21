@@ -8,31 +8,34 @@ const Slider = () => {
       <div className="w-screen overflow-hidden whitespace-nowrap">
         <div className="inline-block mx-4 image-slider">
           {images.map((image) => (
-            <div className="max-w-screen inline-block mx-4 ">
+            <div className="max-w-screen inline-block mx-4 " key={image}>
               <img
                 src={"/past-work/" + image}
                 alt="past work sample "
                 width={360}
+                height={400}
                 className="w-full"
               />
             </div>
           ))}
           {images.map((image) => (
-            <div className="max-w-screen inline-block mx-4 ">
+            <div className="max-w-screen inline-block mx-4 " key={image}>
               <img
                 src={"/past-work/" + image}
                 alt="past work sample "
                 width={360}
+                height={400}
                 className="w-full"
               />
             </div>
           ))}
           {images.map((image) => (
-            <div className="max-w-screen xl:inline-block mx-4 hidden ">
+            <div className="max-w-screen xl:inline-block mx-4 hidden " key={image}>
               <img
                 src={"/past-work/" + image}
                 alt="past work sample "
                 width={360}
+                height={400}
                 className="w-full"
               />
             </div>

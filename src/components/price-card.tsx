@@ -102,7 +102,7 @@ const PriceCard = (props: priceProps) => {
       {/* div containing list of features */}
       <ul className="flex flex-col gap-3 items-start mt-5">
         {Features.map((feature, index) => (
-          <li className="flex gap-2 items-center">
+          <li className="flex gap-2 items-center" key={feature}>
             <CheckBox
               className={
                 index < pricingInfo[props.category].benefitCount

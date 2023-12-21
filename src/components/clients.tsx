@@ -33,13 +33,14 @@ function Clients() {
       <Typography size={"sm"} className="mb-6 ">
         Trusted by 250+ Companies
       </Typography>
-      <div className="flex flex-col sm:flex-row justify-center w-full max-w-4xl lg:max-w-5xl flex-wrap gap-12">
+      <div className="flex flex-col items-center sm:flex-row justify-center w-full max-w-4xl lg:max-w-5xl flex-wrap gap-12">
         {companies.map((image) => (
           <a
             href={image.link}
             target="_blank"
             rel="noreferrer"
             aria-label={"Link to " + image.link}
+            key={image.link}
           >
             <img className="" src={"/companies/" + image.src} alt={"logo: "+ image.link} width={100} height={37} />
           </a>

@@ -35,67 +35,69 @@ const Navbar = () => {
           </ul>
         </li>
 
-        <ul className="flex gap-2">
-          <li>
-            <a
-              href="mailto:me@rajaryan.work?subject=You%20are%20Hired!"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button aria-label="Contact us" variant={"outline"}>
-                Contact us
-              </Button>
-            </a>
-          </li>
-          <li>
-            <Button
-              aria-label="Menu toggle"
-              onClick={toggle}
-              className="sm:hidden p-2"
-              variant={"outline"}
-            >
-              {/* Close Button X */}
-              <svg
-                className={`transform transition-transform ease-in-out duration-300 ${
-                  buttonOpen ? "scale-0 w-0" : ""
-                }`}
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 16 16"
+        <li>
+          <ul className="flex gap-2">
+            <li>
+              <a
+                href="mailto:me@rajaryan.work?subject=You%20are%20Hired!"
+                target="_blank"
+                rel="noreferrer"
               >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
-                />
+                <Button aria-label="Contact us" variant={"outline"}>
+                  Contact us
+                </Button>
+              </a>
+            </li>
+            <li>
+              <Button
+                aria-label="Menu toggle"
+                onClick={toggle}
+                className="sm:hidden p-2"
+                variant={"outline"}
+              >
+                {/* Close Button X */}
+                <svg
+                  className={`transform transition-transform ease-in-out duration-300 ${
+                    buttonOpen ? "scale-0 w-0" : ""
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+                  />
 
-                {/* Hamburger Button  */}
-              </svg>
-              <svg
-                className={`transform transition-transform ease-in-out duration-300 ${
-                  buttonOpen ? "" : "scale-0 w-0"
-                }`}
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="1.5"
-                  d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"
-                />
-              </svg>
-            </Button>
-          </li>
-        </ul>
+                  {/* Hamburger Button  */}
+                </svg>
+                <svg
+                  className={`transform transition-transform ease-in-out duration-300 ${
+                    buttonOpen ? "" : "scale-0 w-0"
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"
+                  />
+                </svg>
+              </Button>
+            </li>
+          </ul>
+        </li>
       </ul>
 
       {/* mobile options */}

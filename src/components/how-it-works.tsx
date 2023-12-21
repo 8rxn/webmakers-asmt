@@ -1,3 +1,4 @@
+import React from "react";
 import Heading from "./ui/heading";
 import Typography from "./ui/typography";
 
@@ -23,7 +24,7 @@ const Workings = () => {
   return (
     <section
       id="how-it-works"
-      className=" flex flex-col gap-12 max-w-7xl mx-auto border-gray-200 rounded-3xl border py-12 shadow-[0px_11px_37px_1px_rgba(28,25,23,0.05)] mb-24 sm:mb-36"
+      className=" flex flex-col gap-12 max-w-7xl mx-4 px-4 sm:mx-auto  border-gray-200 rounded-3xl border py-12 shadow-[0px_11px_37px_1px_rgba(28,25,23,0.05)] mb-24 sm:mb-36"
     >
       <div className="flex flex-col gap-2">
         <Heading size={"sm"}>How it works</Heading>
@@ -34,7 +35,7 @@ const Workings = () => {
       </div>
       <div className="flex flex-col sm:flex-row ">
         {Steps.map((step, index) => (
-          <>
+          <React.Fragment key={step.title}>
             <div>
               <div className=" bg-gradient-to-t from-transparent to-[#d8b4fe] bg-clip-text text-transparent text-[240px] leading-none relative -z-1 text-center">
                 {index + 1}
@@ -68,7 +69,7 @@ const Workings = () => {
                 </svg>
               </div>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
     </section>
