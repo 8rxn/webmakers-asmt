@@ -46,76 +46,83 @@ const Faq = () => {
   };
   return (
     <section className="flex flex-col gap-12 mx-4 my-20 " id="faq">
-      <ul className="flex flex-col gap-3">
-        <Heading size={"default"}>Frequently asked questions</Heading>
-        <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
-          Everything you need to know about the product and billing.
-        </Typography>
-      </ul>
+      <div className="flex flex-col gap-3">
+        
+          <Heading size={"default"}>Frequently asked questions</Heading>
+          <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
+            Everything you need to know about the product and billing.
+          </Typography>
+      </div>
 
       <ul className="flex flex-col gap-8  max-w-3xl mx-auto">
         {questions.map((q, index) => (
-          <div className={`${index!=0?"border-t border-gray-200":""} gap-3 flex flex-col`}>
+          <li>
             <div
-              className="flex justify-between cursor-pointer mt-6"
-              onClick={() => {
-                toggle(index);
-              }}
+              className={`${
+                index != 0 ? "border-t border-gray-200" : ""
+              } gap-3 flex flex-col`}
             >
-              <Typography className="text-start">{q.question}</Typography>
-              <div>
-                {/* Plus Icon */}
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={` transition-transform ease-in-out duration-300 ${
-                    question == index ? "scale-0 -rotate-180 h-0 " : " "
-                  }`}
-                >
-                  <path
-                    d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                    stroke="#1F2937"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+              <div
+                className="flex justify-between cursor-pointer mt-6"
+                onClick={() => {
+                  toggle(index);
+                }}
+              >
+                <Typography className="text-start">{q.question}</Typography>
+                <div>
+                  {/* Plus Icon */}
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={` transition-transform ease-in-out duration-300 ${
+                      question == index ? "scale-0 -rotate-180 h-0 " : " "
+                    }`}
+                  >
+                    <path
+                      d="M12 8V16M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                      stroke="#1F2937"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
 
-                {/* Minus Icon */}
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={` transition-transform ease-in-out duration-300 ${
-                    question == index ? " " : " scale-0 rotate-180 h-0"
-                  }`}
-                >
-                  <path
-                    d="M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
-                    stroke="#1F2937"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                  {/* Minus Icon */}
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={` transition-transform ease-in-out duration-300 ${
+                      question == index ? " " : " scale-0 rotate-180 h-0"
+                    }`}
+                  >
+                    <path
+                      d="M8 12H16M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                      stroke="#1F2937"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
               </div>
+              <Typography
+                size={"nav"}
+                className={`text-start  mx-auto transition-transform ease-out duration-300  ${
+                  question == index
+                    ? "scale-100 translate-y-0 "
+                    : " scale-y-0 -translate-y-[50%] h-0"
+                } `}
+              >
+                {q.answer}
+              </Typography>
             </div>
-            <Typography
-              size={"nav"}
-              className={`text-start  mx-auto transition-transform ease-out duration-300  ${
-                question == index
-                  ? "scale-100 translate-y-0 "
-                  : " scale-y-0 -translate-y-[50%] h-0"
-              } `}
-            >
-              {q.answer}
-            </Typography>
-          </div>
+          </li>
         ))}
       </ul>
     </section>

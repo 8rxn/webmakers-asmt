@@ -19,8 +19,14 @@ const Footer = () => {
           No long-term contracts. No catches. Simple.
         </Heading>
         <Typography>Start your 30-day free trial. Cancel anytime.</Typography>
-        <a href="mailto:me@rajaryan.work?subject=You%20are%20Hired!" target="_blank" rel="noreferrer">
-          <Button className="w-fit">Contact us</Button>
+        <a
+          href="mailto:me@rajaryan.work?subject=You%20are%20Hired!"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button aria-label="Contact us" className="w-fit">
+            Contact us
+          </Button>
         </a>
       </div>
 
@@ -40,12 +46,24 @@ const Footer = () => {
         </Typography>
 
         <div className="grid grid-cols-3 sm:grid-cols-6 gap-6 justify-evenly sm:justify-end text-gray-500 flex-wrap">
-          <a href="https://twitter.com"><TwitterIcon /></a>
-          <a href="https://linkedin.com"><LinkedIcon /></a>
-          <a href="https://facebook.com"><FacebookIcon /></a>
-          <a href="https://github.com"><GithubIcon /></a>
-          <a href="https://.com"><PeaceIcon /></a>
-          <a href="https://dribble.com"><DribbleIcon /></a>
+          <a href="https://twitter.com" aria-label="Twitter website">
+            <TwitterIcon />
+          </a>
+          <a href="https://linkedin.com" aria-label="Github website">
+            <LinkedIcon />
+          </a>
+          <a href="https://facebook.com" aria-label="Facebook website">
+            <FacebookIcon />
+          </a>
+          <a href="https://github.com" aria-label="Github website">
+            <GithubIcon />
+          </a>
+          <a href="https://.com" aria-label="_ website">
+            <PeaceIcon />
+          </a>
+          <a href="https://dribble.com" aria-label="Dribble website">
+            <DribbleIcon />
+          </a>
         </div>
       </div>
     </footer>

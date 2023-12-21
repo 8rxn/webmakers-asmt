@@ -86,12 +86,13 @@ const PriceCard = (props: priceProps) => {
             / Month
           </Typography>
         </div>
-        <a href="#contact" className="w-full">
+        <a href="#contact" className="w-full" aria-label="Get Started Now">
           <Button
+            aria-label="Get Started Now"
             variant={"outline"}
             className={`${
-              pricingInfo[props.category].color == "dark" ? "bg-gray-50" : ""} w-full`
-            }
+              pricingInfo[props.category].color == "dark" ? "bg-gray-50" : ""
+            } w-full`}
           >
             Get Started Now
           </Button>
@@ -99,9 +100,9 @@ const PriceCard = (props: priceProps) => {
       </div>
 
       {/* div containing list of features */}
-      <div className="flex flex-col gap-3 items-start mt-5">
+      <ul className="flex flex-col gap-3 items-start mt-5">
         {Features.map((feature, index) => (
-          <ul className="flex gap-2 items-center">
+          <li className="flex gap-2 items-center">
             <CheckBox
               className={
                 index < pricingInfo[props.category].benefitCount
@@ -124,9 +125,9 @@ const PriceCard = (props: priceProps) => {
               {" "}
               {feature}{" "}
             </Typography>
-          </ul>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

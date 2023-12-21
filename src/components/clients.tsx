@@ -35,8 +35,13 @@ function Clients() {
       </Typography>
       <div className="flex flex-col sm:flex-row justify-center w-full max-w-4xl lg:max-w-5xl flex-wrap gap-12">
         {companies.map((image) => (
-          <a href={image.link} target="_blank" rel="noreferrer">
-            <img className="" src={"/companies/" + image.src} alt="" />
+          <a
+            href={image.link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={"Link to " + image.link}
+          >
+            <img className="" src={"/companies/" + image.src} alt={"logo: "+ image.link} width={100} height={37} />
           </a>
         ))}
       </div>

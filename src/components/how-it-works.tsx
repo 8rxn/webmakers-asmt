@@ -25,14 +25,14 @@ const Workings = () => {
       id="how-it-works"
       className=" flex flex-col gap-12 max-w-7xl mx-auto border-gray-200 rounded-3xl border py-12 shadow-[0px_11px_37px_1px_rgba(28,25,23,0.05)] mb-24 sm:mb-36"
     >
-      <ul className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
         <Heading size={"sm"}>How it works</Heading>
         <Typography>
           Premium designs, unlimited requests, super fast delivery, for one flat
           monthly fee.
         </Typography>
-      </ul>
-      <ul className="flex flex-col sm:flex-row ">
+      </div>
+      <div className="flex flex-col sm:flex-row ">
         {Steps.map((step, index) => (
           <>
             <div>
@@ -70,7 +70,7 @@ const Workings = () => {
             )}
           </>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };
