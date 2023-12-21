@@ -35,9 +35,7 @@ const questions = [
   },
 ];
 
-type Props = {};
-
-const Faq = (props: Props) => {
+const Faq = () => {
   const [question, setQuestion] = useState<number | null>(null);
   const toggle = (index: number) => {
     if (question == index) {
@@ -47,7 +45,7 @@ const Faq = (props: Props) => {
     }
   };
   return (
-    <section className="flex flex-col gap-12">
+    <section className="flex flex-col gap-12 mx-4 my-20 " id="faq">
       <ul className="flex flex-col gap-3">
         <Heading size={"default"}>Frequently asked questions</Heading>
         <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
@@ -55,7 +53,7 @@ const Faq = (props: Props) => {
         </Typography>
       </ul>
 
-      <ul className="flex flex-col gap-8">
+      <ul className="flex flex-col gap-8  max-w-3xl mx-auto">
         {questions.map((q, index) => (
           <div className={`${index!=0?"border-t border-gray-200":""} gap-3 flex flex-col`}>
             <div
@@ -109,7 +107,7 @@ const Faq = (props: Props) => {
             </div>
             <Typography
               size={"nav"}
-              className={`text-start max-w-3xl mx-auto transition-transform ease-out duration-300  ${
+              className={`text-start  mx-auto transition-transform ease-out duration-300  ${
                 question == index
                   ? "scale-100 translate-y-0 "
                   : " scale-y-0 -translate-y-[50%] h-0"

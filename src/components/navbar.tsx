@@ -2,16 +2,14 @@ import Typography from "./ui/typography";
 import Button from "./ui/button";
 import { useState } from "react";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [buttonOpen, setButtonOpen] = useState(false);
   const toggle = () => {
     setButtonOpen(!buttonOpen);
   };
   return (
-    <header className="absolute top-0 w-full mt-8 px-4">
-      <ul className="flex flex-row w-full max-w-7xl justify-between mx-auto items-center">
+    <header className="absolute top-0  w-full mt-8 px-4 bg-transparent">
+      <ul className="flex flex-row w-full max-w-6xl justify-between mx-auto items-center">
         <Typography size={"default"} className="text-gray-800 font-semibold">
           UniCraft
         </Typography>
@@ -28,11 +26,16 @@ const Navbar = (props: Props) => {
         </div>
 
         <div className="flex gap-2">
-          <Button variant={"outline"} >Contact us</Button>
-          <Button onClick={toggle} className="sm:hidden p-2" variant={"outline"}>
+          <Button variant={"outline"}>Contact us</Button>
+          <Button
+            onClick={toggle}
+            className="sm:hidden p-2"
+            variant={"outline"}
+          >
+            {/* Close Button X */}
             <svg
               className={`transform transition-transform ease-in-out duration-300 ${
-                buttonOpen ? "scale-100" : "scale-0 w-0"
+                buttonOpen ? "scale-0 w-0" : ""
               }`}
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -47,10 +50,12 @@ const Navbar = (props: Props) => {
                 stroke-width="1.5"
                 d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
               />
+
+              {/* Hamburger Button  */}
             </svg>
             <svg
               className={`transform transition-transform ease-in-out duration-300 ${
-                buttonOpen ? "scale-0 w-0" : "scale-100"
+                buttonOpen ? "" : "scale-0 w-0"
               }`}
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -69,9 +74,11 @@ const Navbar = (props: Props) => {
           </Button>
         </div>
       </ul>
+
+      {/* mobile options */}
       <div
         className={`py-8 mt-2 flex flex-col gap-12 sm:hidden bg-gray-50 rounded-md shadow-lg transition-transform ease-in-out duration-300 ${
-          buttonOpen ? "scale-y-0 -translate-y-[50%] " : "scale-y-100"
+          buttonOpen ? "" : "scale-y-0 -translate-y-[50%] "
         }`}
       >
         <a href="#how-it-works">

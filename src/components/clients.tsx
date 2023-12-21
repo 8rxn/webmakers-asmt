@@ -1,4 +1,4 @@
-import React from "react";
+
 import Typography from "./ui/typography";
 
 const companies = [
@@ -28,7 +28,7 @@ const companies = [
   },
 ];
 
-function Cleints() {
+function Clients() {
   return (
     <div className="flex flex-col items-center w-full">
       <Typography size={"sm"} className="mb-6 ">Trusted by 250+ Companies</Typography>
@@ -41,4 +41,4 @@ function Cleints() {
   );
 }
 
-export default Cleints;
+export default Clients;

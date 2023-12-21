@@ -86,14 +86,16 @@ const PriceCard = (props: priceProps) => {
             / Month
           </Typography>
         </div>
-        <Button
-          variant={"outline"}
-          className={
-            pricingInfo[props.category].color == "dark" ? "bg-gray-50" : ""
-          }
-        >
-          Get Started Now
-        </Button>
+        <a href="#contact" className="w-full">
+          <Button
+            variant={"outline"}
+            className={`${
+              pricingInfo[props.category].color == "dark" ? "bg-gray-50" : ""} w-full`
+            }
+          >
+            Get Started Now
+          </Button>
+        </a>
       </div>
 
       {/* div containing list of features */}

@@ -2,11 +2,13 @@ import PriceCard from "./price-card";
 import Heading from "./ui/heading";
 import Typography from "./ui/typography";
 
-type Props = {};
-
-const Pricing = (props: Props) => {
+const Pricing = () => {
   return (
-    <section className="flex flex-col gap-12">
+    <section
+      className="flex flex-col gap-12 py-20 bg-top bg-no-repeat bg-contain  "
+      id="pricing"
+      style={{ background: "url('bg-pricing.png')" }}
+    >
       <ul className="flex flex-col gap-3">
         <Heading size={"default"}>
           Pricing made for collaborative support.

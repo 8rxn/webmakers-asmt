@@ -1,10 +1,8 @@
 import Typography from "./ui/typography";
 
-type Props = {};
-
-const Quote = (props: Props) => {
+const Quote = () => {
   return (
-    <section className="bg-gray-50 px-23 py-24 flex flex-col gap-10 items-center">
+    <section className="bg-gray-50 px-20 py-24 flex flex-col gap-10 items-center mb-24 sm:mb-36">
       <img src="/company.png" alt="company quote" className="h-10" />
       <Typography size={"lg"}>
         We&apos;ve been with unicraft to kick start every new project and
