@@ -1,5 +1,6 @@
 import Typography from "./ui/typography";
 
+// list of all companies - Change the content here to update the companies
 const companies = [
   {
     link: "https://zapier.com",
@@ -30,7 +31,7 @@ const companies = [
 function Clients() {
   return (
     <div className="flex flex-col items-center w-full">
-      <Typography size={"sm"} className="mb-6 ">
+      <Typography variant={"sm"} className="mb-6 ">
         Trusted by 250+ Companies
       </Typography>
       <div className="flex flex-col items-center sm:flex-row justify-center w-full max-w-4xl lg:max-w-5xl flex-wrap gap-12">
@@ -42,7 +43,13 @@ function Clients() {
             aria-label={"Link to " + image.link}
             key={image.link}
           >
-            <img className="" src={"/companies/" + image.src} alt={"logo: "+ image.link} width={100} height={37} />
+            <img
+              className=""
+              src={"/companies/" + image.src}
+              alt={"logo: " + image.link}
+              width={100}
+              height={37}
+            />
           </a>
         ))}
       </div>

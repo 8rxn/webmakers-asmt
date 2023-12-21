@@ -1,3 +1,5 @@
+
+/* Image slider animation  */
 .image-slider {
   animation: 25s slide infinite linear;
 }
@@ -14,6 +16,7 @@
     transform: translateX(-150%);
   }
 }
+
 
 @media screen and (max-width: 640px) {
   @keyframes slide {

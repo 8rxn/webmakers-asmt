@@ -1,17 +1,19 @@
 import Typography from "./ui/typography";
 import Button from "./ui/button";
 
+// price card props, different variants of price card
 type priceProps = {
   category: "Freebie" | "Professional" | "Enterprise";
 };
 
+// price card info associated with each variant
 const pricingInfo = {
   Freebie: {
     name: "Freebie",
     tagline: "Ideal for individuals who need quick access to basic features",
     pricing: "0",
-    color: "default",
-    benefitCount: 2,
+    color: "default", // color of the price card
+    benefitCount: 2, // number of benefits to be highlighted
   },
   Professional: {
     name: "Professional",
@@ -31,6 +33,7 @@ const pricingInfo = {
   },
 };
 
+// list of all features for each price card
 const Features = [
   "20,000+ of PNG & SVG graphics",
   "Access to 100 million stock images",
@@ -52,7 +55,7 @@ const PriceCard = (props: priceProps) => {
       {/* div containing name and tagline */}
       <div className="flex flex-col  gap-3 ">
         <Typography
-          size={"default"}
+          variant={"default"}
           className={`text-start font-semibold ${
             pricingInfo[props.category].color == "dark" ? "text-gray-50" : ""
           } `}
@@ -60,7 +63,7 @@ const PriceCard = (props: priceProps) => {
           {props.category}
         </Typography>
 
-        <Typography size={"sm"} className="text-start">
+        <Typography variant={"sm"} className="text-start">
           {pricingInfo[props.category].tagline}
         </Typography>
       </div>
@@ -69,7 +72,7 @@ const PriceCard = (props: priceProps) => {
       <div className="flex flex-col gap-6">
         <div className="flex flex-row flex-nowrap items-center gap-2">
           <Typography
-            size={"lg"}
+            variant={"lg"}
             className={
               pricingInfo[props.category].color == "dark" ? "text-gray-50" : ""
             }
@@ -77,7 +80,7 @@ const PriceCard = (props: priceProps) => {
             $ {pricingInfo[props.category].pricing}
           </Typography>
           <Typography
-            size={"sm"}
+            variant={"sm"}
             className={
               pricingInfo[props.category].color == "dark" ? "text-gray-50" : ""
             }
@@ -113,7 +116,7 @@ const PriceCard = (props: priceProps) => {
               }
             />
             <Typography
-              size={"base"}
+              variant={"base"}
               className={
                 index < pricingInfo[props.category].benefitCount
                   ? pricingInfo[props.category].color == "dark"
@@ -134,7 +137,7 @@ const PriceCard = (props: priceProps) => {
 
 export default PriceCard;
 
-//  svg  checkbox for price card
+//  svg  checkbox for price card features
 const CheckBox = (props: { className?: string }) => {
   return (
     <svg

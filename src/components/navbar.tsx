@@ -3,15 +3,17 @@ import Button from "./ui/button";
 import { useState } from "react";
 
 const Navbar = () => {
+  // state to toggle mobile menu
   const [buttonOpen, setButtonOpen] = useState(false);
   const toggle = () => {
     setButtonOpen(!buttonOpen);
   };
   return (
     <header className="absolute top-0  w-full mt-8 px-4 bg-transparent">
+      {/* Desktop navbar */}
       <ul className="flex flex-row w-full max-w-6xl justify-between mx-auto items-center">
         <li>
-          <Typography size={"default"} className="text-gray-800 font-semibold">
+          <Typography variant={"default"} className="text-gray-800 font-semibold">
             UniCraft
           </Typography>
         </li>
@@ -19,17 +21,17 @@ const Navbar = () => {
           <ul className="sm:flex gap-12 hidden">
             <li>
               <a href="#how-it-works" aria-label="How it works">
-                <Typography size={"default"}>How it works</Typography>
+                <Typography variant={"default"}>How it works</Typography>
               </a>
             </li>
             <li>
               <a href="#pricing" aria-label="Pricing">
-                <Typography size={"default"}>Pricing</Typography>
+                <Typography variant={"default"}>Pricing</Typography>
               </a>
             </li>
             <li>
               <a href="#faq" aria-label="FAQ">
-                <Typography size={"default"}>FAQ</Typography>
+                <Typography variant={"default"}>FAQ</Typography>
               </a>
             </li>
           </ul>
@@ -100,20 +102,20 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* mobile options */}
+      {/* Mobile options */}
       <div
         className={`py-8 mt-2 flex flex-col gap-12 sm:hidden bg-gray-50 rounded-md shadow-lg transition-transform ease-in-out duration-300 ${
           buttonOpen ? "" : "scale-y-0 -translate-y-[50%] "
         }`}
       >
         <a href="#how-it-works" aria-label="How it works">
-          <Typography size={"default"}>How it works</Typography>
+          <Typography variant={"default"}>How it works</Typography>
         </a>
         <a href="#pricing" aria-label="Pricing">
-          <Typography size={"default"}>Pricing</Typography>
+          <Typography variant={"default"}>Pricing</Typography>
         </a>
         <a href="#faq" aria-label="FAQ">
-          <Typography size={"default"}>FAQ</Typography>
+          <Typography variant={"default"}>FAQ</Typography>
         </a>
       </div>
     </header>

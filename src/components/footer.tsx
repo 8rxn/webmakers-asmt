@@ -15,7 +15,7 @@ const Footer = () => {
         id="contact"
         className="flex flex-col gap-6 items-center mx-4 sm:mx-6 md:mx-8 lg:mx-16 "
       >
-        <Heading size={"lg"} className="max-w-[90%]">
+        <Heading variant={"lg"} className="max-w-[90%]">
           No long-term contracts. No catches. Simple.
         </Heading>
         <Typography>Start your 30-day free trial. Cancel anytime.</Typography>
@@ -31,17 +31,17 @@ const Footer = () => {
       </div>
 
       <div className=" border-t border-gray-400 flex flex-col gap-3 items-start pt-8 sm:mx-7">
-        <Typography size={"default"} className="text-gray-800 font-semibold">
+        <Typography variant={"default"} className="text-gray-800 font-semibold">
           UniCraft
         </Typography>
-        <Typography size={"base"} className="text-gray-400 text-start">
+        <Typography variant={"base"} className="text-gray-400 text-start">
           Design amazing digital experiences that create more happy in the
           world.
         </Typography>
       </div>
 
       <div className="flex flex-row justify-between gap-8 items-center sm:mx-7 ">
-        <Typography size={"base"} className="text-gray-400 text-start">
+        <Typography variant={"base"} className="text-gray-400 text-start">
           © 2077 Untitled UI. All rights reserved.
         </Typography>
 
@@ -58,7 +58,8 @@ const Footer = () => {
           <a href="https://github.com" aria-label="Github website">
             <GithubIcon />
           </a>
-          <a href="https://.com" aria-label="_ website">
+          <a href="https://figma.com" aria-label="figma website">
+            {/* This is not figma icon but I couldn't identify it */}
             <PeaceIcon />
           </a>
           <a href="https://dribble.com" aria-label="Dribble website">
@@ -173,6 +174,7 @@ const GithubIcon = () => (
 );
 
 const PeaceIcon = () => (
+  // This is not figma icon but I couldn't identify it
   <svg
     width="24"
     height="24"

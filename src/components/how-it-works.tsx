@@ -2,6 +2,7 @@ import React from "react";
 import Heading from "./ui/heading";
 import Typography from "./ui/typography";
 
+// How it works content - Change the content here to update the how it works section
 const Steps = [
   {
     title: "Subscribe",
@@ -27,7 +28,7 @@ const Workings = () => {
       className=" flex flex-col gap-12 max-w-7xl mx-4 px-4 sm:mx-auto  border-gray-200 rounded-3xl border py-12 shadow-[0px_11px_37px_1px_rgba(28,25,23,0.05)] mb-24 sm:mb-36"
     >
       <div className="flex flex-col gap-2">
-        <Heading size={"sm"}>How it works</Heading>
+        <Heading variant={"sm"}>How it works</Heading>
         <Typography>
           Premium designs, unlimited requests, super fast delivery, for one flat
           monthly fee.
@@ -42,16 +43,17 @@ const Workings = () => {
               </div>
 
               <div className="relative bottom-1/4">
-                <Typography size={"lg"} className="font-bold text-4xl">
+                <Typography variant={"lg"} className="font-bold text-4xl">
                   {step.title}
                 </Typography>
-                <Typography size={"nav"} className="max-w-sm mx-auto">
+                <Typography variant={"nav"} className="max-w-sm mx-auto">
                   {step.description}
                 </Typography>
               </div>
             </div>
             {index != Steps.length - 1 && (
               <div className="flex flex-row justify-center sm:flex-col pt-3 sm:justify-start sm:pt-20">
+                {/* The arrow svg with rotation in mobile devices */}
                 <svg
                   className={`text-gray-600 rotate-90 ${
                     index % 2 == 0 ? "transform -scale-y-100 mr-16" : "ml-16"

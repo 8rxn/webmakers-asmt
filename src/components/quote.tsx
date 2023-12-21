@@ -1,5 +1,14 @@
 import Typography from "./ui/typography";
 
+// quote content - Change the content here to update the quote
+const quoteContent = {
+  content:
+    "We've been with unicraft to kick start every new project and can't imagine working without it.",
+  name: "Candice Wu",
+  designation: "Product Manager, Sisyphus",
+  img: "/avatar.webp",
+};
+
 const Quote = () => {
   return (
     <section className="bg-gray-50 px-20 py-24 flex flex-col gap-10 items-center mb-24 sm:mb-36">
@@ -10,21 +19,18 @@ const Quote = () => {
         height={40}
         width={140}
       />
-      <Typography size={"lg"}>
-        We&apos;ve been with unicraft to kick start every new project and
-        can&apos;t imagine working without it.
-      </Typography>
+      <Typography variant={"lg"}>{quoteContent.content}</Typography>
       <div className="flex flex-col gap-4  ">
         <img
-          src="/avatar.webp"
+          src={quoteContent.img}
           alt="avatar"
           className="h-16 w-16 mx-auto"
           height={64}
           width={64}
         />
         <div>
-          <Typography size={"nav"}>Candice Wu</Typography>
-          <Typography size={"sm"}>Product Manager, Sisyphus</Typography>
+          <Typography variant={"nav"}>{quoteContent.name}</Typography>
+          <Typography variant={"sm"}>{quoteContent.designation}</Typography>
         </div>
       </div>
     </section>

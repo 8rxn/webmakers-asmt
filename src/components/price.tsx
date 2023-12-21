@@ -10,10 +10,10 @@ const Pricing = () => {
       style={{background:'url(/bg-pricing.webp) top no-repeat',backgroundSize:"cover"}}
     >
       <div className="flex flex-col gap-3">
-        <Heading size={"default"}>
+        <Heading variant={"default"}>
           Pricing made for collaborative support.
         </Heading>
-        <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
+        <Typography variant={"nav"} className="text-center max-w-3xl mx-auto">
           Plain is made for your entire company. Only pay for users that
           actually message customers. Everyone else is free, forever.
         </Typography>

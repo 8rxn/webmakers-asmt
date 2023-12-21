@@ -2,6 +2,7 @@ import { useState } from "react";
 import Heading from "./ui/heading";
 import Typography from "./ui/typography";
 
+// list of all questions and answers for the FAQ section
 const questions = [
   {
     question: "Is there a free trial available?",
@@ -36,7 +37,11 @@ const questions = [
 ];
 
 const Faq = () => {
+
+  // state to toggle the answer display
   const [question, setQuestion] = useState<number | null>(null);
+
+  // function to toggle the answer display
   const toggle = (index: number) => {
     if (question == index) {
       setQuestion(null);
@@ -47,8 +52,8 @@ const Faq = () => {
   return (
     <section className="flex flex-col gap-12 mx-4 my-20 " id="faq">
       <div className="flex flex-col gap-3">
-        <Heading size={"default"}>Frequently asked questions</Heading>
-        <Typography size={"nav"} className="text-center max-w-3xl mx-auto">
+        <Heading variant={"default"}>Frequently asked questions</Heading>
+        <Typography variant={"nav"} className="text-center max-w-3xl mx-auto">
           Everything you need to know about the product and billing.
         </Typography>
       </div>
@@ -111,7 +116,7 @@ const Faq = () => {
                 </div>
               </div>
               <Typography
-                size={"nav"}
+                variant={"nav"}
                 className={`text-start  mx-auto transition-transform ease-out duration-300  ${
                   question == index
                     ? "scale-100 translate-y-0 "
