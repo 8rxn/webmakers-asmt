@@ -1,9 +1,14 @@
 # Webmakers Assignment Landing Page
 
 - Deployed link - [Deployed on Vercel](https://webmakers-asmt.vercel.app)
-
 This is a landing page assignment built for Webmakers.
 This is a React application built with TypeScript. It uses Vite as its build tool.
+
+- Performance [Report](https://pagespeed.web.dev/analysis/https-webmakers-asmt-vercel-app/j51fe0800x?form_factor=mobile)
+
+![image](https://github.com/8rxn/webmakers-asmt/assets/75237697/1f2f5a5f-57e2-438c-818c-252af67fc197)
+
+
 
 ## Project Structure
 
